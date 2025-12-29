@@ -1,0 +1,21 @@
+{
+  "name": "Mangalam Chai - Premium Tea & Café",
+  "short_name": "Mangalam Chai",
+  "description": "Premium chai café in Jagatpura, Jaipur offering authentic tea, delicious food, and perfect ambiance",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf8f3",
+  "theme_color": "#8B4513",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
