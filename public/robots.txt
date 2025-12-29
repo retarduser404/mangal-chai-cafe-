@@ -1,19 +1,7 @@
+# Robots.txt for Mangalam Chai (Vercel)
+
 User-agent: *
 Allow: /
 
-# Block access to admin areas (if any)
-Disallow: /admin/
-Disallow: /private/
-
-# Allow all major search engines
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-# Sitemap location
-Sitemap: https://mangalamchai.com/sitemap.xml
+# Sitemap
+Sitemap: https://mangal-chai-cafe.vercel.app/sitemap.xml
