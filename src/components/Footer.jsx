@@ -64,7 +64,7 @@ export default function Footer() {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/9351599510"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform"
@@ -78,7 +78,7 @@ export default function Footer() {
 
               {/* Phone / Call */}
               <a
-                href="tel:+919876543210"
+                href="tel:+919351599510"
                 className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform"
                 title="Call"
               >
