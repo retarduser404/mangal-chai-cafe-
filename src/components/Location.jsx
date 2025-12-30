@@ -76,7 +76,7 @@ export default function Location() {
               </h3>
               <div className="space-y-5">
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/9351599510"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 text-gray-700 hover:text-gray-900 transition-colors duration-300 py-2 justify-center text-base"
@@ -85,16 +85,16 @@ export default function Location() {
                     <path d="M21 11.5a9.5 9.5 0 1 0-3 6.9L21 21l-2.7-2.7A9.4 9.4 0 0 0 21 11.5z" stroke="#2C2C2C" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M16.5 13.2c-.2-.1-1.2-.6-1.4-.6-.2-.1-.4 0-.6.1-.2.1-.4.3-.6.6-.2.3-.6.4-.9.3-.6-.1-1.9-1-2.8-2.3-.7-1-1-2.1-1-2.6 0-.4.2-.6.4-.9.2-.2.4-.3.6-.5.2-.1.3-.2.4-.3.1-.1.1-.2.2-.3.1-.1 0-.2-.1-.3-.1-.1-1.1-2.3-1.5-3.1-.4-.7-.8-.5-1-.5-.2 0-.6 0-.9 0-.3 0-.7.1-1 .5-.3.4-1.2 1.2-1.2 3.1 0 1.9 1.2 3.8 1.4 4.1.2.3 2.4 3.6 5.9 4.9 3.5 1.3 3.5.9 4.1.8.6-.1 2.4-1 2.7-2.2.3-1.2.3-2.3.2-2.5-.1-.2-.6-.4-1-.6z" stroke="#2C2C2C" strokeWidth="0.7" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                  <span>WhatsApp: +91 98765 43210</span>
+                  <span>WhatsApp: +91 93515 99510</span>
                 </a>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919351599510"
                   className="inline-flex items-center gap-3 text-gray-700 hover:text-gray-900 transition-colors duration-300 py-2 justify-center text-base"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12.94.37 1.86.73 2.72a2 2 0 0 1-.45 2.11L9.91 9.91a16 16 0 0 0 6 6l1.36-1.36a2 2 0 0 1 2.11-.45c.86.36 1.78.61 2.72.73A2 2 0 0 1 22 16.92z" stroke="#2C2C2C" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                  <span>Call: +91 98765 43210</span>
+                  <span>Call: +91 93515 99510</span>
                 </a>
                 <a
                   href="mailto:vinitkumars4987@gmail.com"
