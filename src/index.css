@@ -444,3 +444,35 @@ a:focus-visible {
   outline: 2px solid var(--color-chai);
   outline-offset: 2px;
 }
+
+/* Enhanced button styles for better visual hierarchy */
+.btn-primary {
+  background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%) !important;
+  box-shadow: 0 4px 15px rgba(160, 82, 45, 0.3) !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(160, 82, 45, 0.4) !important;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 2px solid #A0522D !important;
+  color: #A0522D !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-secondary:hover {
+  background: #A0522D !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(160, 82, 45, 0.3) !important;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+}
