@@ -25,12 +25,12 @@ export default function About() {
             <h3 className="text-2xl md:text-3xl font-bold mb-10 text-center" style={{ color: '#8B4513' }}>What's Special</h3>
             <ul className="space-y-5 flex flex-col items-center w-full">
               {[
-                'Fresh, homemade chai made with love',
-                'Diverse menu with affordable prices',
-                'Curated music for the perfect vibe',
-                'Friendly staff who remember your order',
-                'Budget-friendly prices for everyone',
-                'Perfect place to chill till late'
+                'Everything tastes fresh and home-made',
+                'Coffee and snacks for everyone, not just chai',
+                'Sauces like white, red, or makhni to choose from',
+                'Curated music that sets the mood',
+                'Friendly staff who make you feel at home',
+                'Cozy hangout spot at easy-on-the-wallet prices'
               ].map((item, idx) => (
                 <li key={idx} className="flex items-center gap-4 md:gap-5 justify-center max-w-sm">
                   <span className="text-2xl md:text-3xl flex-shrink-0" style={{ color: '#8B4513' }}>✓</span>

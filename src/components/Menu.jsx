@@ -31,24 +31,24 @@ export default function Menu() {
       { name: 'Cheese sandwich', price: '₹60', description: '' },
       { name: 'Paneer sandwich', price: '₹70', description: '' },
       { name: 'Makhni sandwich', price: '₹80', description: '' },
-      { name: 'Tandori sandwich', price: '₹80', description: '' },
+      { name: 'Tandoori sandwich', price: '₹80', description: '' },
       { name: 'S.M.C special', price: '₹90', description: '' },
     ],
     'MANGALAM PASTA': [
-      { name: 'Red pasta', price: '₹60', description: '' },
-      { name: 'White pasta', price: '₹80', description: '' },
-      { name: 'Makhani pasta', price: '₹70', description: '' },
+      { name: 'Red Sauce pasta', price: '₹60', description: '' },
+      { name: 'White Sauce pasta', price: '₹80', description: '' },
+      { name: 'Makhani Sauce pasta', price: '₹70', description: '' },
     ],
     'MANGALAM CHOWMEIN': [
       { name: 'Veg chowmein', price: '₹50', description: '' },
       { name: 'Paneer chowmein', price: '₹70', description: '' },
-      { name: 'Shezwan chowmein', price: '₹60', description: '' },
+      { name: 'Schezwan chowmein', price: '₹60', description: '' },
     ],
     'MANGALAM PATTIES': [
-      { name: 'Aalo patties', price: '₹30', description: '' },
+      { name: 'Aalu patties', price: '₹30', description: '' },
       { name: 'Masala patties', price: '₹40', description: '' },
       { name: 'Cheese patties', price: '₹50', description: '' },
-      { name: 'Tandori patties', price: '₹50', description: '' },
+      { name: 'Tandoori patties', price: '₹50', description: '' },
       { name: 'Paneer patties', price: '₹60', description: '' },
       { name: 'Makhni patties', price: '₹50', description: '' },
     ],
@@ -59,6 +59,9 @@ export default function Menu() {
       <div className="max-w-7xl mx-auto w-full flex flex-col items-center">
         <h2 className="section-title w-full">Menu</h2>
         <p className="section-subtitle w-full">Fresh & Delicious Every Time</p>
+        <p className="text-gray-600 text-sm leading-relaxed mb-8 max-w-2xl mx-auto text-center">
+          From Morning Brews to Midnight Bites.
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-14 lg:gap-16 w-full max-w-5xl mx-auto">
           {Object.entries(menuItems).map(([category, items]) => (
