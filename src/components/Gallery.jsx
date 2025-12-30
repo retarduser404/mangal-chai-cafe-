@@ -1,4 +1,10 @@
+import { useState } from 'react';
+import ImageLightbox from './ImageLightbox';
+
 export default function Gallery() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
   const images = [
     {
       id: 1,
@@ -20,7 +26,7 @@ export default function Gallery() {
     },
     {
       id: 4,
-      src: '/images/image4.jpeg',
+      src: '/images/image5.jpeg',
       alt: 'Evening gatherings',
       caption: 'Evening Hangouts',
     },
@@ -38,98 +44,103 @@ export default function Gallery() {
     },
   ];
 
-  return (
-    <section id="gallery" className="py-16 md:py-24 px-4 md:px-8" style={{ background: 'linear-gradient(to bottom, #faf8f3, #F5DEB3)' }}>
-      <div className="max-w-7xl mx-auto w-full">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4" style={{ color: '#2C2C2C' }}>Gallery</h2>
-        <p className="text-center text-gray-600 text-lg mb-12">Moments Worth Capturing</p>
+  const openLightbox = (index) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '24px',
-          width: '100%'
-        }}>
-          {images.map((image) => (
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+
+  return (
+    <section id="gallery" className="py-16 md:py-24 px-4 md:px-8" style={{ background: '#F5F5F5' }}>
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-dark mb-2">Gallery</h2>
+        <p className="text-center text-gray-600 mb-12">Moments Worth Capturing</p>
+
+        {/* Gallery Grid with Hover Effects */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '20px',
+            width: '100%',
+          }}
+        >
+          {images.map((image, index) => (
             <div
               key={image.id}
+              onClick={() => openLightbox(index)}
               style={{
                 position: 'relative',
-                width: '100%',
-                aspectRatio: '4/5',
-                borderRadius: '16px',
                 overflow: 'hidden',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                backgroundColor: '#8B4513'
+                borderRadius: '12px',
+                cursor: 'pointer',
+                aspectRatio: '1',
+                background: '#e0e0e0',
+                transition: 'transform 0.3s ease',
               }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 12px 24px rgba(0,0,0,0.2)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
-              }}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+              className="group"
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                loading="lazy"
                 style={{
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
-                  objectPosition: 'center',
-                  display: 'block'
+                  transition: 'transform 0.3s ease',
                 }}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.08)')}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
               />
+              {/* Overlay Caption */}
               <div
                 style={{
                   position: 'absolute',
                   bottom: 0,
                   left: 0,
                   right: 0,
-                  top: 0,
-                  background: 'rgba(0,0,0,0)',
-                  display: 'flex',
-                  alignItems: 'flex-end',
-                  transition: 'background 300ms ease'
+                  background: 'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 60%)',
+                  color: 'white',
+                  padding: '20px',
+                  transform: 'translateY(20px)',
+                  transition: 'transform 0.3s ease',
+                  opacity: 0,
                 }}
-                className="group-hover:bg-opacity-50"
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(0,0,0,0.5)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.opacity = '1';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(0,0,0,0)';
+                  e.currentTarget.style.transform = 'translateY(20px)';
+                  e.currentTarget.style.opacity = '0';
                 }}
               >
-                <div style={{
-                  width: '100%',
-                  padding: '16px',
-                  background: 'linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))',
-                  color: 'white',
-                  opacity: 0,
-                  transition: 'opacity 300ms ease'
-                }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.opacity = '1';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.opacity = '0';
-                  }}
-                >
-                  <p style={{ fontWeight: 'bold', fontSize: '16px' }}>{image.caption}</p>
-                </div>
+                <p style={{ margin: 0, fontSize: '14px', fontWeight: '500' }}>{image.caption}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div style={{ marginTop: '48px', textAlign: 'center' }}>
-          <p style={{ color: '#555', fontSize: '18px' }}>
-            Missing a moment? Tag us on Instagram{' '}
-            <span style={{ fontWeight: 'bold', color: '#8B4513' }}>@mangalam.chai</span>
-          </p>
-        </div>
+        {/* Instagram CTA */}
+        <p className="text-center text-gray-700 mt-12" style={{ fontSize: '15px' }}>
+          Missing a moment? Tag us on Instagram{' '}
+          <span className="font-bold" style={{ color: '#A0522D' }}>
+            @mangalam.chai
+          </span>
+        </p>
       </div>
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <ImageLightbox images={images} initialIndex={lightboxIndex} onClose={closeLightbox} />
+      )}
     </section>
   );
 }
