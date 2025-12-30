@@ -76,7 +76,7 @@ export default function Hero() {
         </div>
 
         {/* CTA Buttons */}
-        <div className="button-group mb-14 sm:mb-18 md:mb-20 w-full px-4 sm:px-0">
+        <div className="button-group flex flex-col sm:flex-row gap-4 sm:gap-6 mb-20 sm:mb-24 md:mb-28 w-full px-4 sm:px-0 justify-center">
           <button
             onClick={() => scrollToSection('menu')}
             className="btn-primary"
