@@ -39,7 +39,7 @@ export default function Header() {
           <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="flex items-center gap-2 md:gap-3">
             <div className="text-2xl md:text-3xl font-bold" style={{ color: '#8B4513' }}>☕</div>
             <div>
-              <h1 className="text-lg md:text-2xl font-bold" style={{ color: '#2C2C2C' }}>Mangalam Chai</h1>
+              <h1 className="text-lg md:text-2xl font-bold" style={{ color: '#2C2C2C' }}>Shree Mangalam Chai</h1>
               <p className="text-xs md:text-sm text-gray-600 font-medium">Jagatpura, Jaipur</p>
             </div>
           </a>
